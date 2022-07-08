@@ -37,5 +37,15 @@ public class OperacionesEstudiantes {
         return promedioEdades;
     }
     
-    
+   @Override
+    public String toString() {
+        String string = "";
+        for (int i = 0; i < obtenerEstudiante().size(); i++) {
+            string = String.format("%sNombre Estudiante: %s\n",string,
+                    obtenerEstudiante().get(i).obtenerNombre());
+        }
+        string = String.format("%sPromedio Edades: %.2f\n", string,
+                obtenerPromedioEdades());
+        return string;
+    }
 }
